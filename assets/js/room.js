@@ -1,6 +1,7 @@
 const socket = io();
 window.onload = (name) => {
     var name = null;
+    const chats = document.querySelector('#chats');
 
     while (name === null) {
         name = prompt("What's your name? ");
@@ -10,6 +11,8 @@ window.onload = (name) => {
         }
     }
 
+    document.getElementById('name').innerText = name;
+
     const addMsg = (data) => {
         const div = document.createElement('div');
         div.innerHTML = `
@@ -18,6 +21,8 @@ window.onload = (name) => {
         `;
         div.setAttribute('class', 'just-text');
         document.getElementById('chats').appendChild(div);
+
+        chats.scrollTo({ top: chats.scrollHeight, behavior: 'smooth' });
     }
 
     document.getElementById('form').addEventListener('submit', (e) => {
@@ -33,4 +38,5 @@ window.onload = (name) => {
     });
 
     socket.on('msg', res => addMsg(res.data));
+
 }

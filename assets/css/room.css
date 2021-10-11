@@ -45,10 +45,40 @@ button:active{
     background-color: rgb(53, 84, 84);
 }
 
-#chats{
-    height: 93vh;
-    width: 100vw;
+header {
+	height: 8vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: row;
+	padding-right: 50px;
+	padding-left: 50px;
+	font-size: 1.4rem;
     background-color: darkslategray;
+    border-bottom: 1.5px solid dimgray;
+}
+
+header nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    color: aliceblue;
+}
+
+#name {
+    font-weight: 600;
+    background-color: goldenrod;
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+a {
+	text-decoration: none;
+	color: aliceblue;
 }
 
 #chats {
@@ -58,6 +88,15 @@ button:active{
     flex-direction: column;
     overflow-y: scroll;
     overflow-x: hidden;
+    height: 85vh;
+    width: 100vw;
+    background-color: darkslategray;
+    padding-top: 20px;
+    scroll-behavior: smooth;
+}
+
+#chats::-webkit-scrollbar {
+    display: none;
 }
 
 .just-text{
@@ -65,11 +104,11 @@ button:active{
     font-size: large;
     font-weight: 400;
     margin-left: 20px;
-    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-direction: row;
+    margin-bottom: 20px;
 }
 
 .jt-1 {

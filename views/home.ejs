@@ -5,15 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EJS Template</title>
+    <title>Group chat room</title>
     <meta name="author" content="Tanishq Singh">
     <meta name="copyright" content="MIT-C-2021">
     <meta name="robots" content="index, follow">
     <meta name="rating" content="safe for kids">
     <link rel="stylesheet" href="/css/home.css">
 </head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/">Group Chat</a>
+        </nav>
+    </header>
+    <main>
+        <input type="hidden" id='roomID' value="<%= roomID %>">
+        <div class="btn-div">
+            <a href="/room/<%= roomID %>" class='room-btn'>Enter Room</a>
+            <button class='room-btn' id='share-room-btn'>Share Room</button>
+        </div>
+        <h2>
+            <%= roomID %>
+        </h2>
+    </main>
+    <footer>
+        <h3>
+            You can copy the room (using share button), and then share it with your friends to chat in a private
+            room/group.
+            All the chats including your name are not even stored in our system.
+        </h3>
+    </footer>
+</body>
 
 <script defer src="/socket.io/socket.io.js"></script>
 <script defer src="/js/home.js"></script>
