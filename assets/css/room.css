@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+input {
+    font-size: large;
+    color: whitesmoke;
+    outline: none;
+    border: none;
+    border-top: 1.5px solid dimgray;
+    padding: 20px;
+    width: 80vw;
+    height: 7vh;
+    font-weight: 400;
+    background-color: darkslategray;
+}
+
+button {
+    color: whitesmoke;
+    outline: none;
+    border: none;
+    border-top: 1.5px solid dimgray;
+    border-left: 1.5px solid dimgray;
+    font-size: medium;
+    background-color: darkslategray;
+    width: 20vw;
+    height: 7vh;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+button:active{
+    background-color: rgb(53, 84, 84);
+}
+
+#chats{
+    height: 93vh;
+    width: 100vw;
+    background-color: darkslategray;
+}
+
+#chats {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.just-text{
+    color: aliceblue;
+    font-size: large;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.jt-1 {
+    font-weight: 600;
+    background-color: goldenrod;
+    padding: 3px;
+}
+
+.jt-2 {
+    font-style: italic;
+}
